@@ -1,0 +1,25 @@
+header {
+    width: 100%;
+    height: auto;
+    padding-bottom: 8px;
+    background-color: #444;
+    color: #fff;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+header a:hover {
+    color: #ccc;
+}
+
+header a.active {
+    color: #fff;
+    text-decoration: underline;
+}

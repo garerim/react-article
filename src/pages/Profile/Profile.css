@@ -1,0 +1,27 @@
+.profile-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.profile-page button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.profile-page button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.profile-page p {
+    margin-bottom: 10px;
+}
+
