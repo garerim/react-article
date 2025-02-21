@@ -1,12 +1,13 @@
 header {
     width: 100%;
     height: auto;
-    padding-bottom: 8px;
     background-color: var(--background-color);
     color: var(--text-color);
     display: flex;
-    justify-content: space-evenly;
+    gap: 20px;
+    /* justify-content: space-evenly; */
     align-items: center;
+    padding: 8px 20px;
 }
 
 header a {
@@ -35,9 +36,10 @@ header .theme-button {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2px;
+    padding: 5px;
     border-radius: 10px;
     transition: all 0.3s ease;
+    margin-left: auto;
 }
 
 header .theme-button:hover {
