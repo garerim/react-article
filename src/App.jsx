@@ -9,8 +9,7 @@ import ArticleDetails from './pages/ArticleDetails/ArticleDetails.jsx'
 import CreateArticle from './pages/CreateArticle/CreateArticle.jsx'
 import ArticleEdit from './pages/ArticleEdit/ArticleEdit.jsx'
 import React, { useEffect } from 'react'
-import { ThemeProvider, useTheme } from './components/providers/ThemeProvider'
-import { AuthProvider } from './components/providers/AuthProvider'
+import { useTheme } from './components/providers/ThemeProvider'
 
 function App() {
     const { theme } = useTheme()
@@ -22,23 +21,19 @@ function App() {
     }, [theme])
 
     return (
-        <ThemeProvider>
-            <AuthProvider>
-                <div style={{ width: '100%', flex: 1, overflowY: 'hidden' }}>
-                    <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/articles" element={<Articles />} >
-                            <Route path="/articles/:id" element={<ArticleDetails />} />
-                            <Route path="/articles/:id/edit" element={<ArticleEdit />} />
-                        </Route>
-                        <Route path="/articles/create" element={<CreateArticle />} />
-                        <Route path="/register" element={<Register />} />
-                        <Route path="/login" element={<Login />} />
-                        <Route path="/profile" element={<Profile />} />
-                    </Routes>
-                </div>
-            </AuthProvider>
-        </ThemeProvider>
+        <div style={{ width: '100%', flex: 1, overflowY: 'hidden' }}>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/articles" element={<Articles />} >
+                    <Route path="/articles/:id" element={<ArticleDetails />} />
+                    <Route path="/articles/:id/edit" element={<ArticleEdit />} />
+                </Route>
+                <Route path="/articles/create" element={<CreateArticle />} />
+                <Route path="/register" element={<Register />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/profile" element={<Profile />} />
+            </Routes>
+        </div>
     )
 }
 

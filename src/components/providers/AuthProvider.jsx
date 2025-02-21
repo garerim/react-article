@@ -11,6 +11,11 @@ export const AuthProvider = ({ children }) => {
     useEffect(() => {
         const token = localStorage.getItem('authToken');
 
+        if (!token) {
+            setLoading(false);
+            return;
+        }
+
         fetch(`${backendUrl}/profile`, {
             method: 'GET',
             headers: {

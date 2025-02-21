@@ -19,8 +19,9 @@ export default function ArticleCard({ article, search }) {
     }, [article.category_id]);
 
     return (
-        <NavLink className='article-item' to={`/articles/${article.id}?query=${search}`}>
+        <NavLink className='article-card' to={`/articles/${article.id}?query=${search}`}>
             {article.title}
+            <span>par {article.firstname} {article.lastname}</span>
             <div className='badge-categorie' style={{ backgroundColor: category ? category.color : '#000' }}>
                 {article.category_title}
             </div>

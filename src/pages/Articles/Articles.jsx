@@ -22,7 +22,13 @@ export default function Articles() {
 
   const handleSearch = (e) => {
     const value = e.target.value;
-    updateSearchParams({ query: value });
+    if (value) {
+      updateSearchParams({ query: value });
+    } else {
+      const currentParams = Object.fromEntries([...searchParams]);
+      const { query, ...updatedParams } = currentParams;
+      setSearchParams(updatedParams);
+    }
   };
 
   const handleCategoryChange = (e) => {
