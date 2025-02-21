@@ -48,7 +48,6 @@ export const AuthProvider = ({ children }) => {
         }
 
         const data = await response.json();
-        console.log(data);
         
         setUser(data.user);
     };
