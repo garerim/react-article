@@ -8,24 +8,38 @@ import Profile from './pages/Profile/Profile.jsx'
 import ArticleDetails from './pages/ArticleDetails/ArticleDetails.jsx'
 import CreateArticle from './pages/CreateArticle/CreateArticle.jsx'
 import ArticleEdit from './pages/ArticleEdit/ArticleEdit.jsx'
+import React, { useEffect } from 'react'
+import { ThemeProvider, useTheme } from './components/providers/ThemeProvider'
+import { AuthProvider } from './components/providers/AuthProvider'
 
 function App() {
+    const { theme } = useTheme()
 
-  return (
-    <div style={{ width: '100%', flex: 1, overflowY: 'hidden' }}>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/articles" element={<Articles />} >
-          <Route path="/articles/:id" element={<ArticleDetails />} />
-          <Route path="/articles/:id/edit" element={<ArticleEdit />} />
-        </Route>
-        <Route path="/articles/create" element={<CreateArticle />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/profile" element={<Profile />} />
-      </Routes>
-    </div>
-  )
+    useEffect(() => {
+        const rootElement = document.documentElement
+        rootElement.classList.remove('light', 'dark')
+        rootElement.classList.add(theme)
+    }, [theme])
+
+    return (
+        <ThemeProvider>
+            <AuthProvider>
+                <div style={{ width: '100%', flex: 1, overflowY: 'hidden' }}>
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/articles" element={<Articles />} >
+                            <Route path="/articles/:id" element={<ArticleDetails />} />
+                            <Route path="/articles/:id/edit" element={<ArticleEdit />} />
+                        </Route>
+                        <Route path="/articles/create" element={<CreateArticle />} />
+                        <Route path="/register" element={<Register />} />
+                        <Route path="/login" element={<Login />} />
+                        <Route path="/profile" element={<Profile />} />
+                    </Routes>
+                </div>
+            </AuthProvider>
+        </ThemeProvider>
+    )
 }
 
 export default App

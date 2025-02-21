@@ -6,6 +6,8 @@
     align-items: center;
     flex-direction: column;
     gap: 20px;
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
 }
 
 .login-page form {
@@ -13,33 +15,43 @@
     width: 100%;
     max-width: 400px;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--secondary-color-dark);
     border-radius: 20px;
     flex-direction: column;
     gap: 10px;
+    background-color: var(--background-color-light);
 }
 
 .login-page form h3 {
     font-size: 24px;
     font-weight: 600;
     text-align: center;
+    color: var(--primary-color-dark);
 }
 
 .login-page form input {
     padding: 10px;
     border-radius: 5px;
+    border: 1px solid var(--secondary-color-dark);
 }
 
 .login-page form label {
     font-size: 14px;
     font-weight: 600;
+    color: var(--text-color-dark);
 }
 
 .login-page form button {
     padding: 10px;
     border-radius: 5px;
-    background-color: #000;
-    color: #fff;
+    background-color: var(--primary-color-dark);
+    color: var(--text-color-light);
     cursor: pointer;
+    border: none;
+    transition: background-color 0.2s ease;
+}
+
+.login-page form button:hover {
+    background-color: var(--primary-color-light);
 }
 

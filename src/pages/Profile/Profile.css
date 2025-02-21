@@ -4,11 +4,13 @@
     align-items: center;
     flex-direction: column;
     height: 100%;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 .profile-page button {
-    background-color: #000;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--text-color);
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -17,11 +19,12 @@
 }
 
 .profile-page button:hover {
-    background-color: #fff;
-    color: #000;
+    background-color: var(--secondary-color);
+    color: var(--background-color);
 }
 
 .profile-page p {
     margin-bottom: 10px;
+    color: var(--text-color);
 }
 

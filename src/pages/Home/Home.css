@@ -7,7 +7,7 @@
 }
 
 .home-page a {
-    color: #fff;
+    color: var(--primary-color);
 }
 
 

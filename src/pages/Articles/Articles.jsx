@@ -5,12 +5,14 @@ import './Articles.css'
 import { useAuth } from '../../components/providers/AuthProvider'
 import ArticleCard from '../../components/ArticleCard/ArticleCard'
 import { CirclePlus } from 'lucide-react'
+import { useTheme } from '../../components/providers/ThemeProvider'
 
 const backendUrl = import.meta.env.BACKEND_URL || 'http://localhost:5000';
 
 export default function Articles() {
 
   const { user } = useAuth();
+  const { theme, toggleTheme } = useTheme();
 
   const [articles, setArticles] = useState([]);
   const [categories, setCategories] = useState([]);
@@ -50,7 +52,7 @@ export default function Articles() {
   );
 
   return (
-    <div className='articles-page'>
+    <div className={`articles-page ${theme}`}>
       <div className='articles-page-header'>
         <h1>Articles</h1>
         <div className='articles-page-header-actions'>

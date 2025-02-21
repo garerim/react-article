@@ -1,6 +1,8 @@
 .articles-page {
     padding: 20px;
     height: 100%;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 .articles-page-content {
@@ -26,7 +28,7 @@
     flex-direction: column;
     gap: 20px;
     padding: 20px;
-    border-right: 1px solid #ddd;
+    border-right: 1px solid var(--secondary-color);
     margin-right: 10px;
     overflow-y: scroll;
 }
@@ -47,8 +49,8 @@
     gap: 10px;
     font-size: 1.2em;
     font-weight: bold;
-    background-color: #007BFF;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--text-color);
     border: none;
     padding: 5px 10px;
     border-radius: 5px;
@@ -58,7 +60,7 @@
 }
 
 .articles-sidebar button:hover {
-    background-color: #0056b3;
+    background-color: var(--secondary-color);
 }
 
 .articles-page-header {
@@ -70,7 +72,7 @@
     width: 300px;
     height: 30px;
     border-radius: 5px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--secondary-color);
     padding: 5px;
 }
 
@@ -85,13 +87,13 @@
     display: block;
     /* width: calc(33.333% - 20px); */
     width: 100%;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: var(--background-color);
+    border: 1px solid var(--secondary-color);
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-decoration: none;
-    color: #333;
+    color: var(--text-color);
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
@@ -107,11 +109,21 @@
 .article-item div h2 {
     margin: 0 0 10px;
     font-size: 1.5em;
-    color: #007BFF;
+    color: var(--primary-color);
 }
 
 .article-item div p {
     margin: 0;
     font-size: 1em;
-    color: #666;
+    color: var(--secondary-color);
+}
+
+.articles-page.light {
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+}
+
+.articles-page.dark {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
 }
