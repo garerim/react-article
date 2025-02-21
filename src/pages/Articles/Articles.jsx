@@ -7,7 +7,7 @@ import ArticleCard from '../../components/ArticleCard/ArticleCard'
 import { CirclePlus } from 'lucide-react'
 import { useTheme } from '../../components/providers/ThemeProvider'
 
-const backendUrl = import.meta.env.BACKEND_URL || 'http://localhost:5000';
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 export default function Articles() {
 

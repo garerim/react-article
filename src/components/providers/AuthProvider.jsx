@@ -6,7 +6,7 @@ export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
 
-    const backendUrl = import.meta.env.BACKEND_URL || 'http://localhost:5000';
+    const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
     useEffect(() => {
         const token = localStorage.getItem('authToken');

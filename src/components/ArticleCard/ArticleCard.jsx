@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './ArticleCard.css'
 import { NavLink } from 'react-router';
 
-const backendUrl = import.meta.env.BACKEND_URL || 'http://localhost:5000';
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 export default function ArticleCard({ article, search }) {
 

@@ -4,7 +4,7 @@ import { useAuth } from '../../components/providers/AuthProvider'
 import './ArticleDetails.css'
 import { Pencil, Trash2 } from 'lucide-react'
 
-const backendUrl = import.meta.env.BACKEND_URL || 'http://localhost:5000';
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 export default function ArticleDetails() {
 

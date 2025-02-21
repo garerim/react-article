@@ -5,7 +5,7 @@ import { useAuth } from '../../components/providers/AuthProvider'
 import './CreateArticle.css'
 
 
-const backendUrl = import.meta.env.BACKEND_URL || 'http://localhost:5000';
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 export default function CreateArticle() {
 
